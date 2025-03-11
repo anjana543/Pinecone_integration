@@ -16,7 +16,7 @@ First, set up the Pinecone client using your API key and initialize the Pinecone
 
 **Initialize Pinecone Client and Index**
 
-![image](https://github.com/user-attachments/assets/f2fdf3fc-72ec-44cd-a1e8-ee667dc2c17c)
+![image](https://github.com/user-attachments/assets/a4806e95-d127-4ff2-8941-775634264f99)
 
 
 **Step 2:** Load Context from a File
@@ -30,7 +30,7 @@ Create a function to extract documents from a file to be used as context for emb
 
 **Load Documents from a File**
 
-![image](https://github.com/user-attachments/assets/313feb97-6f0d-4f48-b516-83b0c103c430)
+![image](https://github.com/user-attachments/assets/f4ee3a5e-5750-4145-9837-ada64a7a5a82)
 
 
 **Step 3:** Embed and Store Data in Pinecone
