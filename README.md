@@ -49,7 +49,8 @@ To store context data efficiently:
 ![image](https://github.com/user-attachments/assets/698bd66e-2dcf-4855-94a4-797cc19694d4)
 
 
-Conclusion
+**Conclusion**
+
 By following this template, you can successfully integrate Pinecone with LangChain to enhance AI models with context-aware responses. This setup ensures efficient storage, retrieval, and utilization of vector-based context data, making AI interactions more relevant and personalized.
 
-Happy Coding!
+__**Happy Coding!**
