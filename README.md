@@ -16,11 +16,8 @@ First, set up the Pinecone client using your API key and initialize the Pinecone
 
 **Initialize Pinecone Client and Index**
 
-const pinecone = new Pinecone({
-  apiKey: process.env.PINECONE_API_KEY as string,
-});
+![image](https://github.com/user-attachments/assets/f2fdf3fc-72ec-44cd-a1e8-ee667dc2c17c)
 
-const pineconeIndex = pinecone.Index("quickstart");
 
 **Step 2:** Load Context from a File
 
@@ -33,11 +30,8 @@ Create a function to extract documents from a file to be used as context for emb
 
 **Load Documents from a File**
 
-// Create docs with a loader from a file
-async function createDocs(filePath: string): Document[] {
-  const loader = new TextLoader(filePath);
-  return await loader.load();
-}
+![image](https://github.com/user-attachments/assets/313feb97-6f0d-4f48-b516-83b0c103c430)
+
 
 **Step 3:** Embed and Store Data in Pinecone
 To store context data efficiently:
@@ -47,26 +41,13 @@ To store context data efficiently:
    
 **Define the Embedding Model**
 
-// Get the embeddings model 
-function getEmbeddingModel() {
-  return new OpenAIEmbeddings({
-    model: "text-embedding-3-large",
-    apiKey: process.env.OPEN_AI_KEY,
-  });
-}
+![image](https://github.com/user-attachments/assets/df07e875-8e68-42cc-ac4c-7ad40eebe4d7)
+
 
 **Store Embeddings in Pinecone**
 
-// Store embeddings in Pinecone
-async function storeEmbeddings() {
-  const docs = await createDocs("./context/client.txt");
-  const embeddings = getEmbeddingModel();
-  
-  await PineconeStore.fromDocuments(docs, embeddings, {
-    pineconeIndex,
-    maxConcurrency: 5, // Maximum number of concurrent batch requests (each batch contains 1000 vectors)
-  });
-}
+![image](https://github.com/user-attachments/assets/698bd66e-2dcf-4855-94a4-797cc19694d4)
+
 
 Conclusion
 By following this template, you can successfully integrate Pinecone with LangChain to enhance AI models with context-aware responses. This setup ensures efficient storage, retrieval, and utilization of vector-based context data, making AI interactions more relevant and personalized.
