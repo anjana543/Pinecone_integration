@@ -15,6 +15,7 @@ First, set up the Pinecone client using your API key and initialize the Pinecone
 📌 Note: You can replace "quickstart" with a unique and meaningful index name for your application. Ensure that the index name matches the one created in the Pinecone dashboard.
 
 **Initialize Pinecone Client and Index**
+
 const pinecone = new Pinecone({
   apiKey: process.env.PINECONE_API_KEY as string,
 });
@@ -31,6 +32,7 @@ Create a function to extract documents from a file to be used as context for emb
 3. Store metadata for additional context or identification.
 
 **Load Documents from a File**
+
 // Create docs with a loader from a file
 async function createDocs(filePath: string): Document[] {
   const loader = new TextLoader(filePath);
@@ -44,6 +46,7 @@ To store context data efficiently:
 3. Store the embeddings in Pinecone for future retrieval.
    
 **Define the Embedding Model**
+
 // Get the embeddings model 
 function getEmbeddingModel() {
   return new OpenAIEmbeddings({
@@ -53,6 +56,7 @@ function getEmbeddingModel() {
 }
 
 **Store Embeddings in Pinecone**
+
 // Store embeddings in Pinecone
 async function storeEmbeddings() {
   const docs = await createDocs("./context/client.txt");
